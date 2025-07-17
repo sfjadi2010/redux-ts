@@ -10,7 +10,7 @@ export const searchRepositories = (term: string) => {
         });
 
         try {
-            const {data} = await axios.get(`https://registry.npmjs.org/-/v1/search?text=${term}`);
+            const { data } = await axios.get(`https://registry.npmjs.org/-/v1/search?text=${term}`);
             dispatch({
                 type: ActionType.SEARCH_REPOSITORIES_SUCCESS,
                 payload: data.objects.map((repo: any) => repo.package.name)
@@ -20,7 +20,7 @@ export const searchRepositories = (term: string) => {
                 type: ActionType.SEARCH_REPOSITORIES_ERROR,
                 payload: error.message
             });
-            
+
         }
     };
 };

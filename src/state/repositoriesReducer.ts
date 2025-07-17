@@ -2,7 +2,7 @@ import { ActionType } from './action-types';
 import  { Action }  from './actions';
 import { RepositoriesState } from './reducers/RepositoriesState';
 
-const reducer = (
+const repositoryReducer = (
     state: RepositoriesState, 
     action: Action): RepositoriesState => {
     switch (action.type) {
@@ -17,4 +17,4 @@ const reducer = (
     }
 };
 
-export default reducer;
+export default repositoryReducer;
